@@ -72,7 +72,7 @@ class GenerateCommand extends Command
             $html = $this->processor->getHtmlFromMd($disks['source']->get($file));
             $this->processor->generatePostImage($disks['images'], $basename);
 
-            $this->postSummaryData = [
+            $this->postSummaryData[$basename] = [
                 'title' => ucfirst(str_replace('_', ' ', $basename)),
                 'image' => sprintf(
                     '%s/%s/%s.jpg',
@@ -86,7 +86,7 @@ class GenerateCommand extends Command
             $this->processor->generateBlogPost(
                 $disks,
                 $basename,
-                $this->postSummaryData,
+                $this->postSummaryData[$basename],
                 $html
             );
         }
