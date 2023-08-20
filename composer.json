@@ -1,0 +1,52 @@
+{
+    "name": "toonvd/mdblog",
+    "description": "A small framework that generates html files from markdown files.",
+    "keywords": ["framework", "laravel", "laravel zero", "console", "cli", "markdown", "html", "blog"],
+    "homepage": "https://toonvd.github.io",
+    "type": "project",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/toonvd/mdBlog/issues",
+        "source": "https://github.com/toonvd/mdBlog"
+    },
+    "authors": [
+        {
+            "name": "Toon Van Dooren",
+            "email": "toonvd56@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel-zero/framework": "^10.0.2",
+        "league/commonmark": "^2.4",
+        "nunomaduro/termwind": "^1.15.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.8",
+        "mockery/mockery": "^1.5.1",
+        "pestphp/pest": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "bin": ["application"]
+}
