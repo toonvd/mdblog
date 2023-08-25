@@ -42,7 +42,6 @@ class Collector
             $basename = basename($file, '.md');
             $html = $processor->getHtmlFromMd($disks['source']->get($file));
             $processor->generatePostImage($disks['images'], $basename);
-
             $blogPosts[$basename] = [
                 'title' => ucfirst(str_replace('_', ' ', $basename)),
                 'image' => sprintf(
@@ -53,7 +52,7 @@ class Collector
                 ),
                 'url' => sprintf('%s/%s.html', $options['base_url'], $basename),
                 'basename' => $basename,
-                'updated_at' => $repository->run('log', ['-1', '--pretty="format:%ci"', $disks['source']->path($file)]),
+                'updated_at' => trim($repository->run('log', ['-1', '--pretty=%ci', $disks['source']->path($file)])),
                 'html' => $html,
             ];
         }
