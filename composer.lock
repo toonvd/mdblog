@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ea63e9fcac1e833522e7c134a0704f5",
+    "content-hash": "e212ed08dfe342543858ccc10e03b8e7",
     "packages": [
         {
             "name": "brick/math",
@@ -360,6 +360,81 @@
             "time": "2023-07-13T12:00:00+00:00"
         },
         {
+            "name": "gitonomy/gitlib",
+            "version": "v1.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gitonomy/gitlib.git",
+                "reference": "9fea656e75ad6e3452feb2cac46a6c1239cd7f74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gitonomy/gitlib/zipball/9fea656e75ad6e3452feb2cac46a6c1239cd7f74",
+                "reference": "9fea656e75ad6e3452feb2cac46a6c1239cd7f74",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": "^5.6 || ^7.0 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.7",
+                "symfony/process": "^3.4 || ^4.4 || ^5.0 || ^6.0"
+            },
+            "require-dev": {
+                "ext-fileinfo": "*",
+                "phpspec/prophecy": "^1.10.2",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.20 || ^9.5.9",
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "ext-fileinfo": "Required to determine the mimetype of a blob",
+                "psr/log": "Required to use loggers for reporting of execution"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gitonomy\\Git\\": "src/Gitonomy/Git/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Julien Didier",
+                    "email": "genzo.wm@gmail.com",
+                    "homepage": "https://github.com/juliendidier"
+                },
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info",
+                    "homepage": "https://github.com/lyrixx"
+                },
+                {
+                    "name": "Alexandre Salomé",
+                    "email": "alexandre.salome@gmail.com",
+                    "homepage": "https://github.com/alexandresalome"
+                }
+            ],
+            "description": "Library for accessing git",
+            "support": {
+                "issues": "https://github.com/gitonomy/gitlib/issues",
+                "source": "https://github.com/gitonomy/gitlib/tree/v1.3.8"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/gitonomy/gitlib",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-05-11T08:29:06+00:00"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.1",
             "source": {
@@ -420,6 +495,68 @@
                 }
             ],
             "time": "2023-02-25T20:23:15+00:00"
+        },
+        {
+            "name": "icamys/php-sitemap-generator",
+            "version": "4.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/icamys/php-sitemap-generator.git",
+                "reference": "236d8e7de28e9bb3ff028180ab9e3d0fe7c047b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/icamys/php-sitemap-generator/zipball/236d8e7de28e9bb3ff028180ab9e3d0fe7c047b8",
+                "reference": "236d8e7de28e9bb3ff028180ab9e3d0fe7c047b8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "ext-spl": "*",
+                "ext-xml": "*",
+                "ext-xmlwriter": "*",
+                "ext-zlib": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "php-mock/php-mock-phpunit": "^2.6.0",
+                "phpunit/phpunit": "^9.5.19"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Icamys\\SitemapGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitrii Prisacari",
+                    "email": "prisacari.dmitrii@gmail.com",
+                    "homepage": "https://github.com/icamys/"
+                }
+            ],
+            "description": "Simple PHP sitemap generator.",
+            "homepage": "https://github.com/icamys/php-sitemap-generator",
+            "keywords": [
+                "PSR-1",
+                "PSR-2",
+                "PSR-4",
+                "Sitemap",
+                "generator",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/icamys/php-sitemap-generator/issues",
+                "source": "https://github.com/icamys/php-sitemap-generator/tree/4.7.0"
+            },
+            "time": "2023-08-06T22:25:38+00:00"
         },
         {
             "name": "illuminate/bus",
