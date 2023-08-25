@@ -34,12 +34,6 @@ class GenerateCommand extends Command
         'template_path',
     ];
 
-    private array $disks = [];
-
-    private array $postUrls = [];
-
-    private array $postSummaryData = [];
-
     public function __construct(private readonly Collector $collector, private readonly Processor $processor)
     {
         parent::__construct();
