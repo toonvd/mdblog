@@ -8,7 +8,8 @@ on:
 jobs:
   php-code-styling:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,3 +32,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Fix styling
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
