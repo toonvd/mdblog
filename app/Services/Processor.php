@@ -79,7 +79,7 @@ class Processor
 
     public function generateSitemap(FilesystemAdapter $disk, array $posts): void
     {
-        $sitemapGenerator = new SitemapGenerator('', $disk->getConfig()['root']);
+        $sitemapGenerator = new SitemapGenerator('', $disk->path(''));
         foreach ($posts as $post) {
             $sitemapGenerator->addURL($post['url'], new DateTime(), 'always', 0.5);
         }
