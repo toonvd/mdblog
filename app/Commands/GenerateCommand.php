@@ -14,7 +14,7 @@ class GenerateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'generate:blog {--source=} {--target=} {--base_url=} {--image_path=} {--template_path=}';
+    protected $signature = 'generate:blog {--source=} {--target=} {--base_url=} {--image_path=} {--template_path=} {--should_encode=true}';
 
     /**
      * The description of the command.
@@ -64,7 +64,7 @@ class GenerateCommand extends Command
             $this->processor->generateBlogPost($disks, $post);
         }
 
-        $this->processor->generateIndex($disks, $postData);
+        $this->processor->generateIndex($disks, $postData, $this->option('should_encode'));
         $this->processor->generateSitemap($disks['target'], $postData);
     }
 

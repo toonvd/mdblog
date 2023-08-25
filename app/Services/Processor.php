@@ -47,7 +47,7 @@ class Processor
         );
     }
 
-    public function generateIndex(array $disks, array $posts, bool $shouldEncode = true): void
+    public function generateIndex(array $disks, array $posts, bool $shouldEncode): void
     {
         $indexSkeleton = $disks['templates']->read('index.html');
         $blogListSkeleton = $disks['templates']->read('indexBlogPost.html');
