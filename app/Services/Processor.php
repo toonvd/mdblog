@@ -74,7 +74,7 @@ class Processor
     {
         preg_match('/(<h2>.*?<\/h2>)(.*?<\/p>)/ms', $html, $matches);
 
-        return $matches[1] . '<small>' . $updated_at . '</small>' . $matches[2];
+        return $matches[1].'<small>'.$updated_at.'</small>'.$matches[2];
     }
 
     public function generateSitemap(FilesystemAdapter $disk, array $posts): void
