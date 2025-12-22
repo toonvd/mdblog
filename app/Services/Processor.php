@@ -53,7 +53,7 @@ class Processor
         $blogListSkeleton = $disks['templates']->read('indexBlogPost.html');
         $blogListHtml = [];
         foreach ($posts as $post) {
-            $post['summary'] = $this->generateSummaryFromHtml($post['html']);
+            $post['summary'] = $this->generateSummaryFromHtml($post['html'], $post['updated_at']);
             $post = $this->wrapKeysForTemplateVars($post);
             $postHtml = str_replace(array_keys($post), array_values($post), $blogListSkeleton);
             $blogListHtml[] = $postHtml;
@@ -70,11 +70,11 @@ class Processor
         );
     }
 
-    public function generateSummaryFromHtml(string $html): string
+    public function generateSummaryFromHtml(string $html, string $updated_at): string
     {
-        preg_match('/^(.*?<\/p>)/ms', $html, $matches);
+        preg_match('/(<h2>.*?<\/h2>)(.*?<\/p>)/ms', $html, $matches);
 
-        return $matches[1];
+        return $matches[1] . '<small>' . $updated_at . '</small>' . $matches[2];
     }
 
     public function generateSitemap(FilesystemAdapter $disk, array $posts): void
