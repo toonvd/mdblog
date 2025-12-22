@@ -52,7 +52,7 @@ class Collector
                 ),
                 'url' => sprintf('%s/%s.html', $options['base_url'], $basename),
                 'basename' => $basename,
-                'updated_at' => trim($repository->run('log', ['-1', '--pretty=%ci', $disks['source']->path($file)])),
+                'updated_at' => trim($repository->run('log', ['-1', '--pretty=%ai', $disks['source']->path($file)])),
                 'html' => $html,
             ];
         }
